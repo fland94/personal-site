@@ -197,6 +197,7 @@
           grid.innerHTML = '<p class="text-[#586064] dark:text-slate-400 col-span-3 text-center py-12">No projects yet — check back soon.</p>';
           return;
         }
+        projects.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
         grid.innerHTML = projects.map(buildCard).join('');
       } catch (err) {
         msg.textContent = 'Could not load projects. Make sure projects.json is in the same folder.';

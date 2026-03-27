@@ -203,7 +203,7 @@ When working on this project:
 4. **Preserve existing patterns.** Match the naming conventions, class patterns, and file structure already in place.
 5. **Don't change things that aren't broken.** If the task is to add a feature, don't refactor unrelated code at the same time.
 6. **Keep dark mode consistent.** Every new element needs both light and dark variants. Follow the existing color token pattern (`bg-[#f8f9fa] dark:bg-[#0f172a]` etc.).
-7. **When adding a project:** parse or create the Markdown file in `/projects/`, update `projects.json` accordingly, and confirm the card renders correctly in `projects.html`.
+7. **When adding a project:** parse or create the Markdown file in `/projects/`, update `projects.json` accordingly, and confirm the card renders correctly in `projects.html`. Order in `projects.json` does not matter — the renderer sorts by `date` descending (most recent first) automatically.
 8. **When refactoring content:** preserve tone and meaning. Do not add marketing language or inflate claims.
 9. **When asked to generate project entries from raw notes:** apply the style guide above. Ask for clarification if the outcome or impact is unclear.
 10. **When suggesting future improvements:** flag them as optional and don't implement them unless asked.
