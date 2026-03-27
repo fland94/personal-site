@@ -1,0 +1,120 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <clipPath id="shell">
+      <rect x="40" y="30" width="720" height="440" rx="14"/>
+    </clipPath>
+    <filter id="glow">
+      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#050a30" flood-opacity="0.6"/>
+    </filter>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050a30"/>
+      <stop offset="100%" stop-color="#0a1060"/>
+    </linearGradient>
+    <linearGradient id="nav-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#050a30"/>
+      <stop offset="100%" stop-color="#0d1570"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4a90e2"/>
+      <stop offset="100%" stop-color="#7b68ee"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Page background -->
+  <rect width="800" height="500" fill="#03061a"/>
+
+  <!-- Browser shell shadow -->
+  <rect x="40" y="30" width="720" height="440" rx="14" fill="#050a30" filter="url(#glow)"/>
+
+  <!-- Browser chrome -->
+  <rect x="40" y="30" width="720" height="36" rx="0" fill="#0a0f3d" clip-path="url(#shell)"/>
+  <rect x="40" y="30" width="720" height="36" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.7" clip-path="url(#shell)"/>
+  <!-- Traffic lights -->
+  <circle cx="68" cy="48" r="5" fill="#ff5f57"/>
+  <circle cx="84" cy="48" r="5" fill="#febc2e"/>
+  <circle cx="100" cy="48" r="5" fill="#28c840"/>
+  <!-- URL bar -->
+  <rect x="200" y="38" width="340" height="20" rx="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+  <text x="370" y="52" font-size="10" fill="rgba(255,255,255,0.35)" text-anchor="middle" font-family="monospace">federico-landozzi-live-cv.vercel.app</text>
+
+  <!-- Page content area -->
+  <rect x="40" y="66" width="720" height="404" fill="url(#bg-grad)" clip-path="url(#shell)"/>
+
+  <!-- NAVBAR -->
+  <rect x="40" y="66" width="720" height="52" fill="url(#nav-grad)" clip-path="url(#shell)"/>
+  <line x1="40" y1="118" x2="760" y2="118" stroke="rgba(255,255,255,0.08)" stroke-width="0.7"/>
+
+  <!-- Nav brand -->
+  <text x="72" y="97" font-size="15" font-weight="700" fill="#ffffff" letter-spacing="0.5">FL</text>
+  <line x1="90" y1="82" x2="90" y2="110" stroke="rgba(255,255,255,0.15)" stroke-width="0.7"/>
+  <text x="100" y="97" font-size="10.5" fill="rgba(255,255,255,0.5)" letter-spacing="0.3">Federico Landozzi</text>
+
+  <!-- Nav links -->
+  <text x="530" y="97" font-size="11" fill="rgba(255,255,255,0.5)">About</text>
+  <text x="578" y="97" font-size="11" fill="rgba(255,255,255,0.5)">Work</text>
+  <text x="620" y="97" font-size="11" fill="rgba(255,255,255,0.5)">Projects</text>
+  <text x="674" y="97" font-size="11" fill="rgba(255,255,255,0.5)">Contact</text>
+
+  <!-- HERO SECTION -->
+  <text x="400" y="170" font-size="11" fill="rgba(255,255,255,0.3)" text-anchor="middle" letter-spacing="3" font-family="system-ui, sans-serif">PROJECT MANAGER · DIGITAL · DATA</text>
+
+  <text x="400" y="210" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">Federico Landozzi</text>
+
+  <!-- Accent underline -->
+  <rect x="340" y="220" width="120" height="2.5" rx="1" fill="url(#accent)"/>
+
+  <text x="400" y="250" font-size="12" fill="rgba(255,255,255,0.45)" text-anchor="middle" font-family="system-ui, sans-serif">Junior Project Manager @ Publicis Sapient</text>
+  <text x="400" y="268" font-size="11.5" fill="rgba(255,255,255,0.3)" text-anchor="middle" font-family="system-ui, sans-serif">LUISS · Digital Marketing Automation · Automotive</text>
+
+  <!-- CTA buttons -->
+  <rect x="297" y="284" width="94" height="28" rx="6" fill="url(#accent)"/>
+  <text x="344" y="301.5" font-size="11" font-weight="600" fill="white" text-anchor="middle" font-family="system-ui, sans-serif">View Projects</text>
+
+  <rect x="403" y="284" width="94" height="28" rx="6" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
+  <text x="450" y="301.5" font-size="11" fill="rgba(255,255,255,0.6)" text-anchor="middle" font-family="system-ui, sans-serif">Contact Me</text>
+
+  <!-- Social icons row -->
+  <circle cx="370" cy="338" r="10" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="0.7"/>
+  <text x="370" y="342.5" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle" font-family="monospace">GH</text>
+  <circle cx="400" cy="338" r="10" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="0.7"/>
+  <text x="400" y="342.5" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle" font-family="system-ui">in</text>
+
+  <!-- SKILLS STRIP -->
+  <rect x="40" y="374" width="720" height="96" fill="rgba(0,0,0,0.25)" clip-path="url(#shell)"/>
+  <line x1="40" y1="374" x2="760" y2="374" stroke="rgba(255,255,255,0.06)" stroke-width="0.7"/>
+
+  <!-- Skill chips -->
+  <rect x="72" y="394" width="80" height="20" rx="10" fill="rgba(74,144,226,0.12)" stroke="rgba(74,144,226,0.3)" stroke-width="0.7"/>
+  <text x="112" y="407.5" font-size="9.5" fill="#4a90e2" text-anchor="middle" font-family="system-ui, sans-serif">Project Mgmt</text>
+
+  <rect x="162" y="394" width="72" height="20" rx="10" fill="rgba(123,104,238,0.12)" stroke="rgba(123,104,238,0.3)" stroke-width="0.7"/>
+  <text x="198" y="407.5" font-size="9.5" fill="#7b68ee" text-anchor="middle" font-family="system-ui, sans-serif">Data Analytics</text>
+
+  <rect x="244" y="394" width="72" height="20" rx="10" fill="rgba(74,144,226,0.12)" stroke="rgba(74,144,226,0.3)" stroke-width="0.7"/>
+  <text x="280" y="407.5" font-size="9.5" fill="#4a90e2" text-anchor="middle" font-family="system-ui, sans-serif">Web Dev</text>
+
+  <rect x="326" y="394" width="56" height="20" rx="10" fill="rgba(123,104,238,0.12)" stroke="rgba(123,104,238,0.3)" stroke-width="0.7"/>
+  <text x="354" y="407.5" font-size="9.5" fill="#7b68ee" text-anchor="middle" font-family="system-ui, sans-serif">Python</text>
+
+  <rect x="392" y="394" width="50" height="20" rx="10" fill="rgba(74,144,226,0.12)" stroke="rgba(74,144,226,0.3)" stroke-width="0.7"/>
+  <text x="417" y="407.5" font-size="9.5" fill="#4a90e2" text-anchor="middle" font-family="system-ui, sans-serif">React</text>
+
+  <rect x="452" y="394" width="62" height="20" rx="10" fill="rgba(123,104,238,0.12)" stroke="rgba(123,104,238,0.3)" stroke-width="0.7"/>
+  <text x="483" y="407.5" font-size="9.5" fill="#7b68ee" text-anchor="middle" font-family="system-ui, sans-serif">Marketing</text>
+
+  <!-- Mini stat cards -->
+  <rect x="72" y="424" width="76" height="36" rx="7" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+  <text x="110" y="438" font-size="16" font-weight="700" fill="white" text-anchor="middle">3+</text>
+  <text x="110" y="452" font-size="8.5" fill="rgba(255,255,255,0.3)" text-anchor="middle" font-family="system-ui">yrs experience</text>
+
+  <rect x="158" y="424" width="76" height="36" rx="7" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+  <text x="196" y="438" font-size="16" font-weight="700" fill="white" text-anchor="middle">2×</text>
+  <text x="196" y="452" font-size="8.5" fill="rgba(255,255,255,0.3)" text-anchor="middle" font-family="system-ui">Master's 110/30</text>
+
+  <rect x="244" y="424" width="76" height="36" rx="7" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+  <text x="282" y="438" font-size="16" font-weight="700" fill="white" text-anchor="middle">LUISS</text>
+  <text x="282" y="452" font-size="8.5" fill="rgba(255,255,255,0.3)" text-anchor="middle" font-family="system-ui">cum laude</text>
+
+  <!-- Shell border overlay -->
+  <rect x="40" y="30" width="720" height="440" rx="14" fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="0.8"/>
+</svg>

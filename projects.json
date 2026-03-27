@@ -1,11 +1,11 @@
 [
   {
     "title": "Personal Portfolio Site",
-    "description": "End-to-end design and development of this personal portfolio. Built with HTML5, CSS3, and JavaScript. Deployed via GitHub + Vercel CI/CD pipeline.",
-    "tools": ["HTML5", "CSS3", "JavaScript", "Tailwind", "Vercel"],
+    "description": "Personal portfolio and live CV built from scratch in HTML5, CSS3 and JavaScript, deployed via a GitHub → Vercel CI/CD pipeline.",
+    "tools": ["HTML5", "CSS3", "JavaScript", "Vercel", "GitHub"],
     "link": "https://federico-landozzi-live-cv.vercel.app/index.html",
-    "thumbnail": "",
-    "date": "2026-03"
+    "thumbnail": "images/projects/portfolio-thumbnail.svg",
+    "date": "2026-04"
   },
   {
     "title": "Learning Copilot",
