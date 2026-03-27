@@ -1,116 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Federico Landozzi - Personal Site</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Federico Landozzi</title>
+  <meta name="description" content="Federico Landozzi — Project Manager, Digital Marketing, Data Science & Front-End Development."/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <link rel="manifest" href="site.webmanifest"/>
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"/>
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)"/>
+
+  <!-- ── ANTI-FLASH: reads localStorage or system preference before first paint ── -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#565c84",
+            "primary-dim": "#4a5078",
+            "inverse-primary": "#c1c6f5",
+            "on-surface": "#2b3437",
+            "on-surface-variant": "#586064",
+            "surface-container-high": "#e3e9ec"
+          },
+          fontFamily: { "sans": ["Inter","sans-serif"] },
+          borderRadius: { "DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"9999px" }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+    body { font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; }
+    .btn-primary { background:linear-gradient(135deg,#565c84,#4a5078); transition:transform .2s ease,box-shadow .2s ease; }
+    .btn-primary:hover { transform:translateY(-2px); box-shadow:0 20px 40px rgba(43,52,55,.12); }
+    .nav-active-dot { opacity:1!important; }
+  </style>
 </head>
-<body>
-    <header>
-        <div class="px-3 py-2 border-bottom headerbg">
-          <div class="container-fluid">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start my-3">
-              <a href="index.html" class="d-flex justify-content-start my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                <img src="/images/logo_F_small.svg" alt="Logo" width="40" height="40">
-              </a>
-    
-              <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                <li>
-                  <a href="index.html" class="nav-link text-secondary">
-                    <svg class="bi d-block mx-auto mb-1 header-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill=#050a30 class="bi bi-house-check-fill" viewBox="0 0 16 16">
-                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
-                        <path d="m8 3.293 4.712 4.712A4.5 4.5 0 0 0 8.758 15H3.5A1.5 1.5 0 0 1 2 13.5V9.293z"/>
-                        <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514"/>
-                    </svg>
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="about_me.html" class="nav-link text-secondary">
-                    <svg class="bi d-block mx-auto mb-1 header-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#050a30" class="bi bi-person-circle" viewBox="0 0 16 16">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                    </svg>
-                    About Me
-                  </a>
-                </li>
-                <li>
-                  <a href="projects.html" class="nav-link text-secondary">
-                    <svg class="bi d-block mx-auto mb-1 header-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="050a30" class="bi bi-file-earmark-check-fill" viewBox="0 0 16 16">
-                        <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1m1.354 4.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
-                    </svg>
-                    Projects
-                  </a>
-                </li>
-                <li>
-                  <a href="contact_me.html" class="nav-link text-secondary">
-                    <svg class="bi d-block mx-auto mb-1 header-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="050a30" class="bi bi-envelope-paper-fill" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M6.5 9.5 3 7.5v-6A1.5 1.5 0 0 1 4.5 0h7A1.5 1.5 0 0 1 13 1.5v6l-3.5 2L8 8.75zM1.059 3.635 2 3.133v3.753L0 5.713V5.4a2 2 0 0 1 1.059-1.765M16 5.713l-2 1.173V3.133l.941.502A2 2 0 0 1 16 5.4zm0 1.16-5.693 3.337L16 13.372v-6.5Zm-8 3.199 7.941 4.412A2 2 0 0 1 14 16H2a2 2 0 0 1-1.941-1.516zm-8 3.3 5.693-3.162L0 6.873v6.5Z"/>
-                    </svg>
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-      </header>
-      <main>
-        <div class="container">
-            <div class="px-4 py-5 my-5 text-center">
-                <img class="d-block mx-auto mb-4 avatar" src="https://mattfarley.ca/img/mf-avatar.svg" alt="avatar of me">
-                <h1 class="display-5 fw-bold mt-5 mb-3">Federico Landozzi</h1>
-                <div class="col-lg-6 mx-auto">
-                  <p class="lead mb-4">Project Manager Full-Time,<br>Passionate About Digital Marketing,<br>Data Science & Machine Learning<br>and Front-End Development</p>
-                  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center pt-5">
-                    <a href="contact_me.html"><button type="button" class="btn btn-lg px-4 gap-3 custom-button">Contact Me</button></a>
-                  </div>
-                </div>
-            </div>
-            <div class="home-hero__socials">
-                <!-- Inserisci i tuoi link ai social qui -->
-                <div class="home-hero__social">
-                    <a href="https://x.com/FedericoLandoz1" class="home-hero__social-icon-link" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#050a30" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="home-hero__social">
-                    <a href="https://it.linkedin.com/in/federico-landozzi-771b32206" class="home-hero__social-icon-link" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#050a30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="home-hero__social">
-                    <a href="https://github.com/fland94" class="home-hero__social-icon-link" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#050a30" class="bi bi-github" viewBox="0 0 16 16">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="home-hero__social">
-                    <a href="mailto:federicolandozzi94@hotmail.it" class="home-hero__social-icon-link" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#050a30" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
-                            <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
-                            <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+<body class="bg-[#f8f9fa] dark:bg-[#0f172a] text-[#2b3437] dark:text-[#e2e8f0] antialiased transition-colors duration-200">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-[#0f172a]/80 backdrop-blur-md border-b border-[#e3e9ec] dark:border-[#1e293b] px-6 py-3 transition-colors duration-200">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-black text-[#050a30] dark:text-[#c1c6f5] tracking-tighter">F</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="flex flex-col items-center text-xs font-medium text-[#050a30] dark:text-[#c1c6f5] relative">
+          <span class="material-symbols-outlined mb-0.5" style="font-size:20px">home</span>
+          Home
+          <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#050a30] dark:bg-[#c1c6f5] rounded-full nav-active-dot"></span>
+        </a>
+        <a href="about_me.html" class="flex flex-col items-center text-xs font-medium text-[#586064] dark:text-slate-400 hover:text-[#050a30] dark:hover:text-[#c1c6f5] transition-colors relative group">
+          <span class="material-symbols-outlined mb-0.5" style="font-size:20px">person</span>
+          About Me
+          <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#050a30] dark:bg-[#c1c6f5] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+        </a>
+        <a href="projects.html" class="flex flex-col items-center text-xs font-medium text-[#586064] dark:text-slate-400 hover:text-[#050a30] dark:hover:text-[#c1c6f5] transition-colors relative group">
+          <span class="material-symbols-outlined mb-0.5" style="font-size:20px">grid_view</span>
+          Projects
+          <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#050a30] dark:bg-[#c1c6f5] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+        </a>
+        <a href="contact_me.html" class="flex flex-col items-center text-xs font-medium text-[#586064] dark:text-slate-400 hover:text-[#050a30] dark:hover:text-[#c1c6f5] transition-colors relative group">
+          <span class="material-symbols-outlined mb-0.5" style="font-size:20px">mail</span>
+          Contact
+          <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#050a30] dark:bg-[#c1c6f5] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+        </a>
+      </div>
+      <div class="flex items-center gap-3">
+        <!-- Dark mode toggle -->
+        <button id="theme-toggle" aria-label="Toggle dark mode"
+          class="w-8 h-8 flex items-center justify-center text-[#586064] dark:text-slate-400 hover:text-[#050a30] dark:hover:text-[#c1c6f5] transition-colors">
+          <span class="material-symbols-outlined" id="theme-icon" style="font-size:20px">dark_mode</span>
+        </button>
+        <button class="md:hidden text-[#586064] dark:text-slate-400">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-24">
+    <!-- Hero -->
+    <section class="max-w-4xl mx-auto px-6 py-24 flex flex-col items-center text-center">
+      <div class="relative mb-10 group cursor-pointer">
+        <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-[#e3e9ec] dark:border-[#1e293b] shadow-sm transition-transform duration-300 group-hover:scale-105 z-10 relative bg-[#e3e9ec] dark:bg-[#1e293b] flex items-center justify-center">
+          <picture>
+            <source srcset="images/avatar_dark.svg" media="(prefers-color-scheme: dark)"/>
+            <img src="images/avatar.svg" alt="Federico Landozzi" class="w-full h-full object-cover"/>
+          </picture>
         </div>
-      </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <div class="absolute inset-0 bg-primary/10 rounded-full blur-xl scale-150 -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      </div>
+
+      <h1 class="text-[3.5rem] leading-[1.1] font-bold tracking-tight mb-6">Federico Landozzi</h1>
+
+      <p class="text-lg text-[#586064] dark:text-slate-400 max-w-xl mx-auto leading-relaxed mb-12">
+        Project Manager Full-Time,<br/>
+        Passionate About Digital Marketing,<br/>
+        Data Science &amp; Machine Learning<br/>
+        and Front-End Development.
+      </p>
+
+      <a href="contact_me.html" class="btn-primary inline-flex items-center justify-center px-8 py-3 rounded-md text-sm font-semibold text-white">
+        Contact Me
+      </a>
+    </section>
+
+    <!-- Daily Quote -->
+    <!-- To add/edit quotes: update the quotes array in the <script> at bottom -->
+    <div class="w-full bg-[#f1f4f6] dark:bg-[#162032] py-20 transition-colors duration-200">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="bg-white dark:bg-[#1e293b] rounded-xl p-10 max-w-3xl mx-auto text-center transition-colors duration-200"
+             style="box-shadow:0 20px 40px rgba(43,52,55,.04)">
+          <p class="text-xs font-semibold uppercase tracking-widest text-[#586064] dark:text-slate-400 mb-6">Daily Quote</p>
+          <blockquote class="text-xl font-semibold leading-relaxed mb-4" id="quote-text"></blockquote>
+          <p class="text-sm text-[#586064] dark:text-slate-400" id="quote-author"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#f1f4f6] dark:bg-[#162032] py-10 px-6 border-t border-[#e3e9ec] dark:border-[#1e293b] transition-colors duration-200">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#586064] dark:text-slate-400 tracking-wide">
+      <p>© 2026 Federico Landozzi. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <!-- TODO: replace # with your LinkedIn and GitHub URLs -->
+        <a href="#" class="hover:text-[#2b3437] dark:hover:text-[#e2e8f0] transition-colors flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+        <a href="#" class="hover:text-[#2b3437] dark:hover:text-[#e2e8f0] transition-colors flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── DARK MODE TOGGLE ─────────────────────────────────────────────────────
+    const btn = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    function updateIcon() {
+      icon.textContent = document.documentElement.classList.contains('dark') ? 'light_mode' : 'dark_mode';
+    }
+    updateIcon();
+    btn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      updateIcon();
+    });
+
+    // ── DAILY QUOTE POOL ─────────────────────────────────────────────────────
+    // Edit this array to add/remove quotes. Format: { text, author }
+    const quotes = [
+      { text: "Done is better than perfect.", author: "Sheryl Sandberg" },
+      { text: "First, solve the problem. Then, write the code.", author: "John Johnson" },
+      { text: "Simplicity is the soul of efficiency.", author: "Austin Freeman" },
+      { text: "Good code is its own best documentation.", author: "Steve McConnell" },
+      { text: "Data is the new oil.", author: "Clive Humby" },
+      { text: "The best way to predict the future is to invent it.", author: "Alan Kay" },
+      { text: "The function of good software is to make the complex appear to be simple.", author: "Grady Booch" },
+      { text: "Every great design begins with an even better story.", author: "Lorinda Mamo" },
+      { text: "A project is complete when it starts working for you, rather than you working for it.", author: "Scott Allen" },
+      { text: "The most powerful tool we have as developers is automation.", author: "Scott Hanselman" },
+      { text: "Make it work, make it right, make it fast.", author: "Kent Beck" },
+      { text: "Design is not just what it looks like. Design is how it works.", author: "Steve Jobs" },
+    ];
+    const q = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById('quote-text').textContent = `"${q.text}"`;
+    document.getElementById('quote-author').textContent = `— ${q.author}`;
+  </script>
+
 </body>
 </html>
-
-<!-- background-color: #050a30 -->
-<!-- background-color: #f4f6fc -->

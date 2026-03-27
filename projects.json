@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Personal Portfolio Site",
+    "description": "End-to-end design and development of this personal portfolio. Built with HTML5, CSS3, and JavaScript. Deployed via GitHub + Vercel CI/CD pipeline.",
+    "tools": ["HTML5", "CSS3", "JavaScript", "Tailwind", "Vercel"],
+    "link": "#",
+    "thumbnail": "",
+    "date": "2025-03"
+  }
+]

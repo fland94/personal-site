@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <style>
+    .bg   { fill: #ffffff; }
+    .rim  { fill: none; stroke: #050a30; stroke-width: 14; }
+    .f    { fill: #050a30; }
+    @media (prefers-color-scheme: dark) {
+      .bg  { fill: #0f172a; }
+      .rim { stroke: #c1c6f5; }
+      .f   { fill: #c1c6f5; }
+    }
+  </style>
+
+  <!-- background -->
+  <rect class="bg" width="200" height="200" rx="36"/>
+
+  <!-- rim border (inset 7px on each side) -->
+  <rect class="rim" x="9" y="9" width="182" height="182" rx="28"/>
+
+  <!-- F glyph — vertical stem -->
+  <rect class="f" x="56" y="32"  width="30" height="136"/>
+  <!-- F top bar -->
+  <rect class="f" x="56" y="32"  width="90" height="28"/>
+  <!-- F mid bar -->
+  <rect class="f" x="56" y="95"  width="66" height="25"/>
+</svg>

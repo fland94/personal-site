@@ -1,131 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Federico Landozzi - Contact</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Contact | Federico Landozzi</title>
+  <meta name="description" content="Get in touch with Federico Landozzi."/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <link rel="manifest" href="site.webmanifest"/>
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"/>
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)"/>
+
+  <!-- ── ANTI-FLASH ── -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#565c84",
+            "inverse-primary": "#c1c6f5"
+          },
+          fontFamily: { "sans": ["Inter","sans-serif"] },
+          borderRadius: { "DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"9999px" }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+    body { font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; }
+    .nav-active-dot { opacity:1!important; }
+    .map-frame { filter:grayscale(1) opacity(.45); transition:opacity .3s ease; }
+    .map-frame:hover { filter:grayscale(1) opacity(.65); }
+    /* Slightly less opacity in dark mode so map doesn't over-bright */
+    .dark .map-frame { filter:grayscale(1) opacity(.25); }
+    .dark .map-frame:hover { filter:grayscale(1) opacity(.4); }
+  </style>
 </head>
-<body>
-    <header>
-        <div class="px-3 py-2 border-bottom headerbg">
-          <div class="container-fluid">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start my-3">
-              <a href="index.html" class="d-flex justify-content-start my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                <img src="/images/logo_F_small.svg" alt="Logo" width="40" height="40">
-              </a>
-    
-              <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                <li>
-                  <a href="index.html" class="nav-link text-secondary">
-                    <svg class="bi d-block mx-auto mb-1 header-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill=#050a30 class="bi bi-house-check-fill" viewBox="0 0 16 16">
-                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
-                        <path d="m8 3.293 4.712 4.712A4.5 4.5 0 0 0 8.758 15H3.5A1.5 1.5 0 0 1 2 13.5V9.293z"/>
-                        <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514"/>
-                    </svg>
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="about_me.html" class="nav-link text-secondary">
-                    <svg class="bi d-block mx-auto mb-1 header-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#050a30" class="bi bi-person-circle" viewBox="0 0 16 16">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                    </svg>
-                    About Me
-                  </a>
-                </li>
-                <li>
-                  <a href="projects.html" class="nav-link text-secondary">
-                    <svg class="bi d-block mx-auto mb-1 header-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="050a30" class="bi bi-file-earmark-check-fill" viewBox="0 0 16 16">
-                        <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1m1.354 4.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
-                    </svg>
-                    Projects
-                  </a>
-                </li>
-                <li>
-                  <a href="contact_me.html" class="nav-link text-secondary">
-                    <svg class="bi d-block mx-auto mb-1 header-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="050a30" class="bi bi-envelope-paper-fill" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M6.5 9.5 3 7.5v-6A1.5 1.5 0 0 1 4.5 0h7A1.5 1.5 0 0 1 13 1.5v6l-3.5 2L8 8.75zM1.059 3.635 2 3.133v3.753L0 5.713V5.4a2 2 0 0 1 1.059-1.765M16 5.713l-2 1.173V3.133l.941.502A2 2 0 0 1 16 5.4zm0 1.16-5.693 3.337L16 13.372v-6.5Zm-8 3.199 7.941 4.412A2 2 0 0 1 14 16H2a2 2 0 0 1-1.941-1.516zm-8 3.3 5.693-3.162L0 6.873v6.5Z"/>
-                    </svg>
-                    Contact
-                  </a>
-                </li>
-              </ul>
+<body class="bg-[#f8f9fa] dark:bg-[#0f172a] text-[#2b3437] dark:text-[#e2e8f0] antialiased transition-colors duration-200">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-[#0f172a]/80 backdrop-blur-md border-b border-[#e3e9ec] dark:border-[#1e293b] px-6 py-3 transition-colors duration-200">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-black text-[#050a30] dark:text-[#c1c6f5] tracking-tighter">F</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="flex flex-col items-center text-xs font-medium text-[#586064] dark:text-slate-400 hover:text-[#050a30] dark:hover:text-[#c1c6f5] transition-colors relative group">
+          <span class="material-symbols-outlined mb-0.5" style="font-size:20px">home</span>
+          Home
+          <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#050a30] dark:bg-[#c1c6f5] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+        </a>
+        <a href="about_me.html" class="flex flex-col items-center text-xs font-medium text-[#586064] dark:text-slate-400 hover:text-[#050a30] dark:hover:text-[#c1c6f5] transition-colors relative group">
+          <span class="material-symbols-outlined mb-0.5" style="font-size:20px">person</span>
+          About Me
+          <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#050a30] dark:bg-[#c1c6f5] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+        </a>
+        <a href="projects.html" class="flex flex-col items-center text-xs font-medium text-[#586064] dark:text-slate-400 hover:text-[#050a30] dark:hover:text-[#c1c6f5] transition-colors relative group">
+          <span class="material-symbols-outlined mb-0.5" style="font-size:20px">grid_view</span>
+          Projects
+          <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#050a30] dark:bg-[#c1c6f5] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+        </a>
+        <a href="contact_me.html" class="flex flex-col items-center text-xs font-medium text-[#050a30] dark:text-[#c1c6f5] relative">
+          <span class="material-symbols-outlined mb-0.5" style="font-size:20px">mail</span>
+          Contact
+          <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#050a30] dark:bg-[#c1c6f5] rounded-full nav-active-dot"></span>
+        </a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" aria-label="Toggle dark mode"
+          class="w-8 h-8 flex items-center justify-center text-[#586064] dark:text-slate-400 hover:text-[#050a30] dark:hover:text-[#c1c6f5] transition-colors">
+          <span class="material-symbols-outlined" id="theme-icon" style="font-size:20px">dark_mode</span>
+        </button>
+        <button class="md:hidden text-[#586064] dark:text-slate-400">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-32 pb-24 px-8 max-w-7xl mx-auto min-h-screen">
+
+    <!-- Hero -->
+    <section class="mb-20 max-w-3xl">
+      <h1 class="text-[3.5rem] font-bold tracking-tight leading-none mb-6">Get In Touch</h1>
+      <p class="text-xl text-[#586064] dark:text-slate-400 leading-relaxed max-w-xl">
+        Whether you want to discuss a project, a collaboration, or just say hi — my inbox is always open.
+      </p>
+    </section>
+
+    <!-- Form + Sidebar -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+      <!-- Contact Form -->
+      <div class="lg:col-span-7">
+        <!--
+          NOTE: Hook this up to a form backend to make it functional.
+          Recommended: Formspree (free tier) — replace action="#" with your Formspree endpoint.
+          See: https://formspree.io
+        -->
+        <form action="#" method="POST" class="space-y-12">
+          <div class="space-y-8">
+
+            <div>
+              <label for="name" class="block text-[.75rem] font-semibold tracking-widest uppercase text-[#586064] dark:text-slate-400 mb-3">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name"
+                class="w-full bg-transparent border-0 border-b border-[#abb3b7]/40 dark:border-slate-600 py-4 px-0 text-[#2b3437] dark:text-[#e2e8f0] focus:ring-0 focus:border-[#2b3437] dark:focus:border-[#e2e8f0] transition-colors placeholder:text-[#abb3b7] dark:placeholder:text-slate-600 text-base"/>
+            </div>
+
+            <div>
+              <label for="email" class="block text-[.75rem] font-semibold tracking-widest uppercase text-[#586064] dark:text-slate-400 mb-3">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="hello@example.com"
+                class="w-full bg-transparent border-0 border-b border-[#abb3b7]/40 dark:border-slate-600 py-4 px-0 text-[#2b3437] dark:text-[#e2e8f0] focus:ring-0 focus:border-[#2b3437] dark:focus:border-[#e2e8f0] transition-colors placeholder:text-[#abb3b7] dark:placeholder:text-slate-600 text-base"/>
+            </div>
+
+            <div>
+              <label for="message" class="block text-[.75rem] font-semibold tracking-widest uppercase text-[#586064] dark:text-slate-400 mb-3">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="How can I help you?"
+                class="w-full bg-transparent border-0 border-b border-[#abb3b7]/40 dark:border-slate-600 py-4 px-0 text-[#2b3437] dark:text-[#e2e8f0] focus:ring-0 focus:border-[#2b3437] dark:focus:border-[#e2e8f0] transition-colors placeholder:text-[#abb3b7] dark:placeholder:text-slate-600 resize-none text-base"></textarea>
+            </div>
+
+          </div>
+
+          <button type="submit"
+            class="inline-flex items-center justify-center px-10 py-5 bg-[#050a30] dark:bg-[#565c84] text-white text-xs font-semibold tracking-widest uppercase hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-[#050a30]/10 dark:shadow-[#565c84]/20 rounded-sm">
+            Send Message
+            <span class="material-symbols-outlined ml-3 text-[18px]">send</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-4 lg:col-start-9 space-y-14">
+
+        <!-- Social -->
+        <div>
+          <h3 class="text-[.75rem] font-semibold tracking-widest uppercase text-[#586064] dark:text-slate-400 mb-6">Social</h3>
+          <div class="flex flex-col space-y-4">
+            <!-- TODO: replace # with your LinkedIn URL -->
+            <a href="#" class="flex items-center text-[#2b3437] dark:text-[#e2e8f0] group w-fit" target="_blank" rel="noopener">
+              <span class="w-10 h-10 rounded-full bg-[#f1f4f6] dark:bg-[#1e293b] flex items-center justify-center mr-4 group-hover:bg-[#050a30] dark:group-hover:bg-[#565c84] group-hover:text-white transition-all">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </span>
+              <span class="font-medium border-b border-transparent group-hover:border-[#2b3437] dark:group-hover:border-[#e2e8f0] transition-all">LinkedIn</span>
+            </a>
+            <!-- TODO: replace # with your GitHub URL -->
+            <a href="#" class="flex items-center text-[#2b3437] dark:text-[#e2e8f0] group w-fit" target="_blank" rel="noopener">
+              <span class="w-10 h-10 rounded-full bg-[#f1f4f6] dark:bg-[#1e293b] flex items-center justify-center mr-4 group-hover:bg-[#050a30] dark:group-hover:bg-[#565c84] group-hover:text-white transition-all">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </span>
+              <span class="font-medium border-b border-transparent group-hover:border-[#2b3437] dark:group-hover:border-[#e2e8f0] transition-all">GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Location: Roma -->
+        <div>
+          <h3 class="text-[.75rem] font-semibold tracking-widest uppercase text-[#586064] dark:text-slate-400 mb-6">Location</h3>
+          <div class="rounded-lg relative overflow-hidden h-48 bg-[#f1f4f6] dark:bg-[#1e293b] transition-colors duration-200"
+               style="outline:1px solid rgba(171,179,183,.15)">
+            <!-- OpenStreetMap embed — Rome, Italy. No API key needed. -->
+            <iframe
+              class="map-frame absolute inset-0 w-full h-full border-0"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=12.3680,41.8200,12.5880,41.9700&layer=mapnik&marker=41.8902,12.4922"
+              title="Rome, Italy"
+              loading="lazy">
+            </iframe>
+            <!-- Text overlay -->
+            <div class="absolute bottom-0 left-0 right-0 p-4 z-10 bg-gradient-to-t from-white/80 dark:from-[#1e293b]/90 to-transparent pointer-events-none transition-colors duration-200">
+              <p class="text-sm font-bold text-[#2b3437] dark:text-[#e2e8f0]">Rome, Italy</p>
+              <p class="text-xs text-[#586064] dark:text-slate-400">Available for worldwide remote collaboration</p>
             </div>
           </div>
-    </header>
-    <div class="container formcontainer">
-        <h1 style="text-align: center;">CONTACT</h1>
-        <div class="underline"></div>
-        <p style="text-align: center; padding: 2rem;;">Feel free to Contact me by submitting the form below and I will get back to you as soon as possible</p>
-
-        <div class="form-container">
-            <form>
-                <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Enter Your Name" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter Your Email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" placeholder="Enter Your Message" rows="5" required></textarea>
-                <div class="button-container">
-                    <button class="form-button" type="submit">SUBMIT</button>
-                </div>                
-            </form>
         </div>
-    </div>  
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-5 d-flex align-items-center">
-            <a href="index.html" class="mb-4 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                <img src="/images/logo_F_small.svg" alt="Logo" width="50" height="50">
-            </a>
-            <span class="mb-3 mb-md-0 copyrightphrase">© Copyright 2025. Made by Federico Landozzi</span>
-          </div>
-      
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3">
-                <a href="https://x.com/FedericoLandoz1" class="home-hero__social-icon-link" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f4f6fc" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-                    </svg>
-                </a>
-            </li>
-            <li class="ms-3">
-                <a href="https://it.linkedin.com/in/federico-landozzi-771b32206" class="home-hero__social-icon-link" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f4f6fc" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                    </svg>
-                </a>    
-            </li>
-            <li class="ms-3">
-                <a href="https://github.com/fland94" class="home-hero__social-icon-link" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f4f6fc" class="bi bi-github" viewBox="0 0 16 16">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                    </svg>
-                </a>    
-            </li>
-            <li class="ms-3">
-                <a href="mailto:federicolandozzi94@hotmail.it" class="home-hero__social-icon-link" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f4f6fc" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
-                        <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
-                        <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
-                    </svg>
-                </a>
-            </li>
-          </ul>
-        </footer>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#f1f4f6] dark:bg-[#162032] py-10 px-6 border-t border-[#e3e9ec] dark:border-[#1e293b] transition-colors duration-200">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#586064] dark:text-slate-400 tracking-wide">
+      <p>© 2026 Federico Landozzi. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-[#2b3437] dark:hover:text-[#e2e8f0] transition-colors flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+        <a href="#" class="hover:text-[#2b3437] dark:hover:text-[#e2e8f0] transition-colors flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    function updateIcon() {
+      icon.textContent = document.documentElement.classList.contains('dark') ? 'light_mode' : 'dark_mode';
+    }
+    updateIcon();
+    btn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      updateIcon();
+    });
+  </script>
+
 </body>
 </html>
