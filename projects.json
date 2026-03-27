@@ -5,11 +5,11 @@
     "tools": ["HTML5", "CSS3", "JavaScript", "Vercel", "GitHub"],
     "link": "https://federico-landozzi-live-cv.vercel.app/index.html",
     "thumbnail": "images/projects/portfolio-thumbnail.svg",
-    "date": "2026-04"
+    "date": "2026-03"
   },
   {
     "title": "Learning Copilot",
-    "description": "Desktop AI learning app (Windows 11) that positions the AI as a personal tutor orchestrating study over time — a guided workflow, not a chatbot. Covers topic-based and materials-based learning paths, embedded knowledge checks, spaced repetition, and a collapsible tutor sidebar central to the experience.",
+    "description": "Desktop AI learning app (Windows 11) that positions the AI as a personal tutor orchestrating study over time — a guided workflow, not a chatbot.",
     "tools": ["Next.js", "TailwindCSS", "shadcn/ui", "CodeMirror"],
     "link": "https://github.com/fland94/learning-copilot",
     "thumbnail": "images/projects/learning-copilot-thumbnail.svg",
