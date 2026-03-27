@@ -1,0 +1,164 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Plus Jakarta Sans', system-ui, sans-serif">
+  <defs>
+    <clipPath id="shell-clip">
+      <rect x="40" y="30" width="720" height="440" rx="14"/>
+    </clipPath>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="18" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <!-- progress circles dasharray=94.2 (2*pi*15) -->
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#08080F"/>
+
+  <!-- App shell shadow -->
+  <rect x="40" y="30" width="720" height="440" rx="14" fill="#181824" filter="url(#shadow)"/>
+
+  <!-- App shell border -->
+  <rect x="40" y="30" width="720" height="440" rx="14" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="0.8"/>
+
+  <!-- Sidebar background -->
+  <rect x="40" y="30" width="158" height="440" rx="0" fill="#111120" clip-path="url(#shell-clip)"/>
+  <!-- sidebar right border -->
+  <line x1="198" y1="30" x2="198" y2="470" stroke="rgba(255,255,255,0.07)" stroke-width="0.7"/>
+
+  <!-- Main area background -->
+  <rect x="198" y="30" width="562" height="440" fill="#0D0D16" clip-path="url(#shell-clip)"/>
+
+  <!-- ── SIDEBAR ── -->
+
+  <!-- Logo row -->
+  <rect x="51" y="41" width="22" height="22" rx="5" fill="#7C80D8"/>
+  <line x1="57" y1="52" x2="67" y2="52" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="62" y1="47" x2="62" y2="57" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="57.5" y1="47.5" x2="66.5" y2="56.5" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="66.5" y1="47.5" x2="57.5" y2="56.5" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+  <text x="78" y="55" font-size="11.5" font-weight="600" fill="#E0E0EE" letter-spacing="-0.3">Learning Copilot</text>
+  <!-- Logo separator -->
+  <line x1="51" y1="70" x2="186" y2="70" stroke="rgba(255,255,255,0.07)" stroke-width="0.7"/>
+
+  <!-- Nav: All paths (active) -->
+  <rect x="46" y="78" width="146" height="26" rx="6" fill="#1A1A3A"/>
+  <text x="58" y="95" font-size="11.5" font-weight="500" fill="#9090E2">All paths</text>
+
+  <!-- Nav: Tutor AI -->
+  <text x="58" y="122" font-size="11.5" fill="#8080A0">Tutor AI</text>
+
+  <!-- Nav separator -->
+  <line x1="51" y1="136" x2="186" y2="136" stroke="rgba(255,255,255,0.07)" stroke-width="0.7"/>
+
+  <!-- Path section label -->
+  <text x="56" y="151" font-size="9" font-weight="500" fill="#454560" letter-spacing="0.8" text-transform="uppercase">REINF. LEARNING</text>
+
+  <!-- Sub-nav items -->
+  <text x="58" y="170" font-size="11" fill="#8080A0">Dashboard</text>
+  <text x="58" y="189" font-size="11" fill="#8080A0">Session</text>
+  <text x="58" y="208" font-size="11" fill="#8080A0">Practice</text>
+  <text x="58" y="227" font-size="11" fill="#8080A0">Roadmap</text>
+
+  <!-- Mini roadmap card -->
+  <rect x="46" y="238" width="146" height="78" rx="8" fill="#1C1C2A" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+  <text x="56" y="253" font-size="9.5" font-weight="500" fill="#E0E0EE">Reinf. Learning</text>
+  <text x="172" y="253" font-size="9.5" font-weight="500" fill="#7C80D8" text-anchor="end">38%</text>
+  <!-- dots -->
+  <circle cx="58" cy="264" r="3.5" fill="#7C80D8"/>
+  <circle cx="67" cy="264" r="3.5" fill="#7C80D8"/>
+  <circle cx="76" cy="264" r="3" fill="#D0800A" opacity="0.8"/>
+  <circle cx="84" cy="264" r="4" fill="none" stroke="#7C80D8" stroke-width="1.5"/>
+  <circle cx="92" cy="264" r="3" fill="rgba(255,255,255,0.07)"/>
+  <circle cx="100" cy="264" r="3" fill="rgba(255,255,255,0.07)"/>
+  <text x="56" y="278" font-size="9" fill="#454560">Now: <tspan font-weight="500" fill="#8080A0">Value Functions</tspan></text>
+  <text x="56" y="290" font-size="9" fill="#454560">Next: <tspan font-weight="500" fill="#8080A0">Dynamic Programming</tspan></text>
+  <!-- review badge -->
+  <rect x="56" y="297" width="68" height="14" rx="7" fill="#221808"/>
+  <text x="90" y="307.5" font-size="8.5" fill="#D0800A" text-anchor="middle">Review due: MDP</text>
+
+  <!-- Profile -->
+  <line x1="46" y1="430" x2="186" y2="430" stroke="rgba(255,255,255,0.07)" stroke-width="0.7"/>
+  <circle cx="62" cy="448" r="11" fill="#7C80D8"/>
+  <text x="62" y="452" font-size="9.5" font-weight="600" fill="white" text-anchor="middle">M</text>
+  <text x="79" y="445" font-size="11" font-weight="500" fill="#E0E0EE">Marco</text>
+  <text x="79" y="456" font-size="9" fill="#454560">Developer</text>
+
+  <!-- ── MAIN AREA ── -->
+
+  <!-- Header -->
+  <text x="218" y="64" font-size="16" font-weight="600" fill="#E0E0EE" letter-spacing="-0.4">Your learning paths</text>
+  <text x="218" y="80" font-size="11" fill="#454560">3 active · pick up where you left off</text>
+
+  <!-- New path button -->
+  <rect x="660" y="47" width="82" height="28" rx="7" fill="#7C80D8"/>
+  <text x="701" y="64.5" font-size="11" font-weight="500" fill="white" text-anchor="middle">+ New path</text>
+
+  <!-- ── Card 1: Reinforcement Learning ── -->
+  <rect x="214" y="96" width="530" height="86" rx="10" fill="#181824" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+  <!-- accent left border -->
+  <rect x="214" y="96" width="2.5" height="86" rx="1" fill="#7C80D8"/>
+
+  <!-- progress circle 38% – dashoffset = 94.2 * (1-0.38) = 58.4 -->
+  <circle cx="249" cy="139" r="18" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="3.5"/>
+  <circle cx="249" cy="139" r="18" fill="none" stroke="#7C80D8" stroke-width="3.5" stroke-linecap="round"
+    stroke-dasharray="113.1" stroke-dashoffset="70.1" transform="rotate(-90 249 139)"/>
+  <text x="249" y="143" font-size="8.5" font-weight="600" fill="#9090E2" text-anchor="middle">38%</text>
+
+  <text x="278" y="116" font-size="13.5" font-weight="600" fill="#E0E0EE" letter-spacing="-0.2">Reinforcement Learning</text>
+  <text x="278" y="131" font-size="10.5" fill="#454560">Developer · Build a personal project</text>
+
+  <!-- badges -->
+  <rect x="570" y="103" width="56" height="15" rx="4" fill="#1A1A3A"/>
+  <text x="598" y="113.5" font-size="9" fill="#9090E2" text-anchor="middle">3 sources</text>
+  <rect x="632" y="103" width="56" height="15" rx="7" fill="#1A1A3A"/>
+  <text x="660" y="113.5" font-size="9" font-weight="500" fill="#9090E2" text-anchor="middle">In progress</text>
+
+  <!-- module info -->
+  <text x="278" y="156" font-size="10.5" fill="#8080A0">Module 4 · <tspan font-weight="500" fill="#E0E0EE">Value Functions</tspan></text>
+  <!-- review badge -->
+  <rect x="540" y="147" width="68" height="15" rx="7" fill="#221808"/>
+  <text x="574" y="157.5" font-size="8.5" fill="#D0800A" text-anchor="middle">1 review due</text>
+  <!-- open button -->
+  <rect x="618" y="145" width="50" height="20" rx="6" fill="#7C80D8"/>
+  <text x="643" y="158.5" font-size="10" font-weight="500" fill="white" text-anchor="middle">Open</text>
+
+  <!-- ── Card 2: Python Automation ── -->
+  <rect x="214" y="192" width="530" height="76" rx="10" fill="#181824" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+
+  <circle cx="249" cy="230" r="18" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="3.5"/>
+  <circle cx="249" cy="230" r="18" fill="none" stroke="#7C80D8" stroke-width="3.5" stroke-linecap="round"
+    stroke-dasharray="113.1" stroke-dashoffset="85.9" transform="rotate(-90 249 230)"/>
+  <text x="249" y="234" font-size="8.5" font-weight="600" fill="#9090E2" text-anchor="middle">24%</text>
+
+  <text x="278" y="210" font-size="13.5" font-weight="600" fill="#E0E0EE" letter-spacing="-0.2">Python Automation</text>
+  <text x="278" y="225" font-size="10.5" fill="#454560">Developer · Use it in practice</text>
+  <rect x="637" y="201" width="56" height="15" rx="7" fill="#1A1A3A"/>
+  <text x="665" y="211.5" font-size="9" font-weight="500" fill="#9090E2" text-anchor="middle">In progress</text>
+  <text x="278" y="248" font-size="10.5" fill="#8080A0">Module 2 · <tspan font-weight="500" fill="#E0E0EE">File I/O &amp; Paths</tspan></text>
+  <rect x="618" y="239" width="50" height="20" rx="6" fill="#7C80D8"/>
+  <text x="643" y="252.5" font-size="10" font-weight="500" fill="white" text-anchor="middle">Open</text>
+
+  <!-- ── Card 3: PMBOK ── -->
+  <rect x="214" y="278" width="530" height="76" rx="10" fill="#181824" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+
+  <circle cx="249" cy="316" r="18" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="3.5"/>
+  <circle cx="249" cy="316" r="18" fill="none" stroke="#7DC32A" stroke-width="3.5" stroke-linecap="round"
+    stroke-dasharray="113.1" stroke-dashoffset="32.8" transform="rotate(-90 249 316)"/>
+  <text x="249" y="320" font-size="8.5" font-weight="600" fill="#7DC32A" text-anchor="middle">71%</text>
+
+  <text x="278" y="296" font-size="13.5" font-weight="600" fill="#E0E0EE" letter-spacing="-0.2">PMBOK – Project Management</text>
+  <text x="278" y="311" font-size="10.5" fill="#454560">Developer · Prepare for an interview</text>
+  <rect x="572" y="287" width="56" height="15" rx="4" fill="#1A1A3A"/>
+  <text x="600" y="297.5" font-size="9" fill="#9090E2" text-anchor="middle">7 sources</text>
+  <rect x="634" y="287" width="50" height="15" rx="7" fill="#122010"/>
+  <text x="659" y="297.5" font-size="9" font-weight="500" fill="#7DC32A" text-anchor="middle">On track</text>
+  <text x="278" y="334" font-size="10.5" fill="#8080A0">Module 9 · <tspan font-weight="500" fill="#E0E0EE">Risk Management</tspan></text>
+  <rect x="618" y="325" width="50" height="20" rx="6" fill="#7DC32A"/>
+  <text x="643" y="338.5" font-size="10" font-weight="500" fill="white" text-anchor="middle">Open</text>
+
+  <!-- Divider + New path link -->
+  <line x1="214" y1="370" x2="744" y2="370" stroke="rgba(255,255,255,0.06)" stroke-width="0.7"/>
+  <rect x="388" y="380" width="124" height="26" rx="6" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="0.7"/>
+  <text x="450" y="396.5" font-size="11" fill="#8080A0" text-anchor="middle">+ Start a new learning path</text>
+
+  <!-- Shell rounded clip overlay (re-applies corners on top) -->
+  <rect x="40" y="30" width="720" height="440" rx="14" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="0.8"/>
+</svg>
