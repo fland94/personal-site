@@ -68,7 +68,7 @@ export async function POST(request: Request) {
 
   if (!apiKey) {
     return NextResponse.json(
-      { message: "Email service is not configured yet. Please email me directly for now." },
+      { message: "Message delivery is not configured yet. Please try again later." },
       { status: 503 }
     );
   }
@@ -109,8 +109,15 @@ export async function POST(request: Request) {
   });
 
   if (!response.ok) {
+    const resendError = await response.text();
+    console.error("Resend email error", {
+      status: response.status,
+      statusText: response.statusText,
+      body: resendError
+    });
+
     return NextResponse.json(
-      { message: "Message could not be sent right now. Please email me directly." },
+      { message: "Message could not be sent right now. Please try again later." },
       { status: 502 }
     );
   }
