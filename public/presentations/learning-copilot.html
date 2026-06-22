@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learning Copilot - HTML Presentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: #f6f5f1;
+        color: #1b1a17;
+        font-family: "Hanken Grotesk", Arial, sans-serif;
+      }
+      .deck {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+      }
+      header, footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 22px 34px;
+        border-color: #e2e0d8;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        color: #8a8880;
+      }
+      header { border-bottom: 1px solid #e2e0d8; }
+      footer { border-top: 1px solid #e2e0d8; align-items: center; }
+      .slide {
+        display: none;
+        min-height: 560px;
+        padding: 56px;
+        align-items: center;
+      }
+      .slide.active { display: grid; }
+      .slide-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .kicker {
+        margin: 0 0 24px;
+        color: #8a8880;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 0;
+        font-family: "Newsreader", Georgia, serif;
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 1.05;
+      }
+      p {
+        max-width: 620px;
+        margin: 28px auto 0;
+        color: #56544d;
+        font-size: 19px;
+        line-height: 1.65;
+      }
+      .meta-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        margin-top: 44px;
+        border: 1px solid #e2e0d8;
+        background: #e2e0d8;
+        text-align: left;
+      }
+      .meta-grid div {
+        background: #fbfaf7;
+        padding: 24px;
+      }
+      .meta-grid span {
+        display: block;
+        margin-bottom: 9px;
+        color: #8a8880;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10px;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
+      .meta-grid strong {
+        font-weight: 500;
+        line-height: 1.4;
+      }
+      button {
+        cursor: pointer;
+        border: 1px solid #d6d3ca;
+        border-radius: 3px;
+        background: transparent;
+        color: #1b1a17;
+        padding: 12px 18px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+      }
+      button:hover {
+        background: #efede7;
+      }
+      .count {
+        color: #56544d;
+      }
+      @media (max-width: 760px) {
+        header, footer { padding: 18px 20px; flex-direction: column; }
+        .slide { padding: 38px 22px; min-height: 520px; }
+        h1 { font-size: 42px; }
+        .meta-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="deck">
+      <header>
+        <span>Learning Copilot</span>
+        <span>HTML deck / Federico Landozzi</span>
+      </header>
+
+      <section class="slide active">
+        <div class="slide-inner">
+          <p class="kicker">Case / 01</p>
+          <h1>AI learning, organized as a product workflow.</h1>
+          <p>A desktop concept that treats the AI as a tutor coordinating study over time, not as another open-ended chat box.</p>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="slide-inner">
+          <p class="kicker">Problem</p>
+          <h1>Learning tools often lose the thread.</h1>
+          <p>Chat experiences are useful, but they can struggle to preserve study structure, progression and context across sessions.</p>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="slide-inner">
+          <p class="kicker">Approach</p>
+          <h1>Plan, practice, review, repeat.</h1>
+          <p>The prototype frames learning as a guided loop with clear surfaces for planning, coding practice, notes and review.</p>
+          <div class="meta-grid">
+            <div><span>Role</span><strong>Product concept and build</strong></div>
+            <div><span>Stack</span><strong>Next.js, TailwindCSS, shadcn/ui, CodeMirror</strong></div>
+            <div><span>Mode</span><strong>AI-assisted iteration and QA</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="slide-inner">
+          <p class="kicker">Outcome</p>
+          <h1>An installable demo with a clear point of view.</h1>
+          <p>The project became a demo-ready desktop app concept for Windows, useful for exploring how AI can support long-term learning workflows.</p>
+        </div>
+      </section>
+
+      <footer>
+        <button type="button" id="prev">Previous</button>
+        <span class="count" id="count">1 / 4</span>
+        <button type="button" id="next">Next</button>
+      </footer>
+    </main>
+    <script>
+      const slides = Array.from(document.querySelectorAll(".slide"));
+      const count = document.getElementById("count");
+      let index = 0;
+      function render() {
+        slides.forEach((slide, slideIndex) => slide.classList.toggle("active", slideIndex === index));
+        count.textContent = `${index + 1} / ${slides.length}`;
+      }
+      document.getElementById("prev").addEventListener("click", () => {
+        index = (index - 1 + slides.length) % slides.length;
+        render();
+      });
+      document.getElementById("next").addEventListener("click", () => {
+        index = (index + 1) % slides.length;
+        render();
+      });
+    </script>
+  </body>
+</html>
