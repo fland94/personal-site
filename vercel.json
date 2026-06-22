@@ -1,0 +1,28 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about_me.html",
+      "destination": "/#about",
+      "permanent": true
+    },
+    {
+      "source": "/projects.html",
+      "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/contact_me.html",
+      "destination": "/#contact",
+      "permanent": true
+    }
+  ]
+}
