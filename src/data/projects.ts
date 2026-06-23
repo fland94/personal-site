@@ -19,6 +19,29 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "etf-ai-advisor",
+    category: "Fintech / Agentic AI",
+    year: "2026",
+    title: "ETF AI Advisor",
+    description:
+      "An AI investing copilot that turns every monthly ETF deposit into a disciplined, explainable recommendation, with five specialist agents and hard-coded portfolio guardrails.",
+    summary:
+      "A full-stack agentic finance product built solo: deterministic code calculates portfolio drift, constraints and integer-share logic, while an AI council reasons over market context, risk and allocation strategy before a final referee approves the recommendation.",
+    tags: ["Next.js", "Supabase", "Clerk", "Claude"],
+    role: "Solo product design & build",
+    outcomeShort: "Agentic finance copilot",
+    outcome:
+      "Designed, built and deployed an end-to-end AI investing advisor on near-zero infrastructure cost, combining market data, secure auth, portfolio intelligence and a multi-agent recommendation engine.",
+    highlights: [
+      "Built a five-agent council for financial intelligence, core allocation, satellite opportunities, AI cost sustainability and final risk review.",
+      "Engineered the key trust layer: AI explains and challenges the recommendation, but deterministic code owns every number, band, limit and guardrail.",
+      "Turned ETF investing from a spreadsheet habit into a guided monthly decision system: recommendation-only, transparent, and deliberately impossible to auto-trade."
+    ],
+    thumbnail: "/images/projects/etf-ai-advisor-thumbnail.png",
+    presentationPath: "/presentations/etf-ai-advisor.html",
+    downloadName: "etf-ai-advisor-presentation.html"
+  },
+  {
     slug: "learning-copilot",
     category: "Desktop / AI learning",
     year: "2026",
