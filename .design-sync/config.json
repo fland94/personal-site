@@ -1,0 +1,17 @@
+{
+  "projectId": "a2177c89-5aae-4ea8-b12a-8703b32c9dab",
+  "pkg": "federico-landozzi-portfolio",
+  "globalName": "FLPortfolio",
+  "shape": "package",
+  "srcDir": "src/components",
+  "cssEntry": "app/globals.css",
+  "tsconfig": "tsconfig.json",
+  "runtimeFontPrefixes": ["Hanken Grotesk", "Newsreader", "JetBrains Mono"],
+  "libOverrides": {
+    "bundle.mjs": "Add process.env.__NEXT_* defines so next/link (used in Header) bundles without ReferenceError in browser"
+  },
+  "overrides": {
+    "Header": { "cardMode": "column" }
+  },
+  "readmeHeader": ".design-sync/conventions.md"
+}

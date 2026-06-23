@@ -6,3 +6,10 @@ out
 .vercel
 *.log
 tsconfig.tsbuildinfo
+
+# design-sync generated output (committed: .design-sync/config.json, NOTES.md, conventions.md, previews/)
+.ds-sync/
+ds-bundle/
+.design-sync/.cache/
+.design-sync/learnings/
+.design-sync/node_modules
