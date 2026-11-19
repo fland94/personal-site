@@ -35,7 +35,8 @@ test sender may work only with limited recipients.
 ## Projects workflow
 
 Projects are intentionally easy to update. Add or edit entries in
-`src/data/projects.ts`.
+`src/data/projects.json`; the type stays in `src/data/projects.ts`. Career OS
+edits this file through pull requests.
 
 Each project can point to a standalone HTML presentation stored in:
 
